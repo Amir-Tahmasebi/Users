@@ -12,6 +12,7 @@ export default function Home(props: UsersFeatures.HomeProps) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const data = await UsersFeatures.getUsers("/users?page=1").then((res) => res);
+  
   return {
     props: data,
   };
